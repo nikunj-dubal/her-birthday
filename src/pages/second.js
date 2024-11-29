@@ -3,7 +3,7 @@ import './css/second.css';
 import { Link } from 'react-router-dom';
 import PageChangeAnimation from '../components/pageChange';
 import ReactPlayer from 'react-player';
-import video from '../assets/vid.webm';
+import video from '../assets/vid.mp4';
 
 const Second = () => {
   return (
