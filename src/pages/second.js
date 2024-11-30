@@ -3,11 +3,11 @@ import './css/second.css';
 import { Link } from 'react-router-dom';
 import PageChangeAnimation from '../components/pageChange';
 import ReactPlayer from 'react-player';
-import video from '../assets/vid.mp4';
 import placeholder1 from '../assets/placeholder.jpg';
 import placeholder2 from '../assets/placeholder 2.png';
 import placeholder3 from '../assets/placeholder 3.jpeg';
 import placeholder4 from '../assets/placeholder 4.jpeg';
+import video from '../assets/vid.mp4';
 
 const Second = () => {
   return (
@@ -18,14 +18,21 @@ const Second = () => {
             <div className="collage-container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               <ReactPlayer
                 url={video}
-                playing={false}
                 controls={true}
-                width="60%"
-                height="auto"
+                playing={false}
+                width="800px"
+                height="450px"
                 style={{
-                  margin: '10px',
-                  borderRadius: '10px',
-                  overflow: 'hidden'
+                  margin: '20px auto',
+                  boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
+                  borderRadius: '8px'
+                }}
+                config={{
+                  file: {
+                    attributes: {
+                      controlsList: 'download'
+                    }
+                  }
                 }}
               />
             </div>
