@@ -14,6 +14,38 @@ const Second = () => {
     <PageChangeAnimation>
       <div className="second-page App">
         <header className="App-header">
+          <div className="main-container">
+            <div className="collage-container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <ReactPlayer
+                url={video}
+                playing={false}
+                controls={true}
+                width="60%"
+                height="auto"
+                style={{
+                  margin: '10px',
+                  borderRadius: '10px',
+                  overflow: 'hidden'
+                }}
+              />
+            </div>
+            <p>
+              <br></br>
+              <br></br>
+            </p>
+            <div className="navigation-section">
+              <Link to="/" style={{ textDecoration: 'none' }}>
+                <button className="next-button">
+                  Previous Page
+                </button>
+              </Link>
+              <Link to="/3" style={{ textDecoration: 'none' }}>
+                <button className="next-button">
+                  Next Page
+                </button>
+              </Link>
+            </div>
+          </div>
           <img 
             src={placeholder1}
             alt="Collage item 1"
@@ -29,37 +61,10 @@ const Second = () => {
               left: '50px',
               boxShadow: '5px 5px 15px rgba(0,0,0,0.3)',
               border: '10px solid white',
-              background: 'white'
+              background: 'white',
+              zIndex: 1
             }}
           />
-          <div className="main-container">
-            <div className="collage-container">
-              <ReactPlayer
-                url={video}
-                playing={false}
-                controls={true}
-                width="60%"
-                height="auto"
-                style={{
-                  margin: '10px',
-                  borderRadius: '10px',
-                  overflow: 'hidden'
-                }}
-              />
-            </div>
-            <div className="navigation-section">
-              <Link to="/" style={{ textDecoration: 'none' }}>
-                <button className="next-button">
-                  Previous Page
-                </button>
-              </Link>
-              <Link to="/3" style={{ textDecoration: 'none' }}>
-                <button className="next-button">
-                  Next Page
-                </button>
-              </Link>
-            </div>
-          </div>
           <img
             src={placeholder2}
             alt="Collage item 2" 
