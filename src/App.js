@@ -6,15 +6,18 @@ import Third from './pages/third';
 
 const App = () => {
   return (
-    <Router>
+    <div>
+      <Router>
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/2" element={<Second />} />
-        <Route path="/3" element={<Third />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/2" element={<Second />} />
+          <Route path="/3" element={<Third />} />
+        </Routes>
 
-    </Router>
+      </Router>
+      <Home />
+    </div>
   );
 };
 
