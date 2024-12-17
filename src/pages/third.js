@@ -18,26 +18,49 @@ of our lives like this only supporting each other.\n\nI am so grateful to have y
 and babe enjoy your day.\n\n                                          ~ Your Chako❤️`);
 
   useEffect(() => {
+    let heartInterval;
+
     const createHeart = () => {
+      // Check if document and body exist
+      if (!document || !document.body) return;
+
       const heart = document.createElement('div');
       heart.classList.add('heart');
-      const leftPosition = Math.random() * window.innerWidth;
-      heart.style.left = leftPosition + 'px';
-      heart.style.animationDuration = Math.random() * 1 + 0.5 + 's';
+      
+      // Calculate position safely
+      const leftPosition = Math.random() * (window.innerWidth || document.documentElement.clientWidth);
+      heart.style.left = `${leftPosition}px`;
+      heart.style.animationDuration = `${Math.random() * 1 + 0.5}s`;
       heart.innerHTML = '❤️';
-      heart.style.zIndex = '-1'; // Changed to -1 to go behind the paper
+      heart.style.zIndex = '-1';
       heart.style.top = '-20px';
+      
       document.body.appendChild(heart);
 
       setTimeout(() => {
-        heart.remove();
+        if (heart && heart.parentNode) {
+          heart.remove();
+        }
       }, 1500);
     };
 
-    const heartInterval = setInterval(createHeart, 150);
+    // Start animation only when document is ready
+    const startHeartAnimation = () => {
+      if (document.readyState === 'complete') {
+        heartInterval = setInterval(createHeart, 150);
+      } else {
+        window.addEventListener('load', () => {
+          heartInterval = setInterval(createHeart, 150);
+        });
+      }
+    };
+
+    startHeartAnimation();
     
     return () => {
-      clearInterval(heartInterval);
+      if (heartInterval) {
+        clearInterval(heartInterval);
+      }
     };
   }, []);
 
