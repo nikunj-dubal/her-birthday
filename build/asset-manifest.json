@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/her-birthday/static/css/main.56a5db0a.css",
-    "main.js": "/her-birthday/static/js/main.3319dc34.js",
+    "main.css": "/her-birthday/static/css/main.7f52cbdc.css",
+    "main.js": "/her-birthday/static/js/main.e3391e65.js",
     "reactPlayerYouTube.js": "/her-birthday/static/js/reactPlayerYouTube.36e8f551.chunk.js",
     "reactPlayerSoundCloud.js": "/her-birthday/static/js/reactPlayerSoundCloud.ffdd3c62.chunk.js",
     "reactPlayerVimeo.js": "/her-birthday/static/js/reactPlayerVimeo.672b933c.chunk.js",
@@ -17,7 +17,6 @@
     "reactPlayerFilePlayer.js": "/her-birthday/static/js/reactPlayerFilePlayer.65aa7a0f.chunk.js",
     "reactPlayerPreview.js": "/her-birthday/static/js/reactPlayerPreview.038c562d.chunk.js",
     "static/js/453.14b93e6f.chunk.js": "/her-birthday/static/js/453.14b93e6f.chunk.js",
-    "static/media/vid.mp4": "/her-birthday/static/media/vid.e846fa0b0d2ee81b5b62.mp4",
     "static/media/Elvis Presley - Can't Help Falling in Love.mp3": "/her-birthday/static/media/Elvis Presley - Can't Help Falling in Love.a31cd55fbedff054c01a.mp3",
     "static/media/placeholder 2.png": "/her-birthday/static/media/placeholder 2.e30c0b7fc76a1be8b734.png",
     "static/media/placeholder 4.jpeg": "/her-birthday/static/media/placeholder 4.18e87585cfee0fd016af.jpeg",
@@ -26,8 +25,8 @@
     "static/media/placeholder 3.jpeg": "/her-birthday/static/media/placeholder 3.e475b8a11a2ed4080197.jpeg",
     "static/media/placeholder.jpg": "/her-birthday/static/media/placeholder.50626b423c6912c3f0de.jpg",
     "index.html": "/her-birthday/index.html",
-    "main.56a5db0a.css.map": "/her-birthday/static/css/main.56a5db0a.css.map",
-    "main.3319dc34.js.map": "/her-birthday/static/js/main.3319dc34.js.map",
+    "main.7f52cbdc.css.map": "/her-birthday/static/css/main.7f52cbdc.css.map",
+    "main.e3391e65.js.map": "/her-birthday/static/js/main.e3391e65.js.map",
     "reactPlayerYouTube.36e8f551.chunk.js.map": "/her-birthday/static/js/reactPlayerYouTube.36e8f551.chunk.js.map",
     "reactPlayerSoundCloud.ffdd3c62.chunk.js.map": "/her-birthday/static/js/reactPlayerSoundCloud.ffdd3c62.chunk.js.map",
     "reactPlayerVimeo.672b933c.chunk.js.map": "/her-birthday/static/js/reactPlayerVimeo.672b933c.chunk.js.map",
@@ -45,7 +44,7 @@
     "453.14b93e6f.chunk.js.map": "/her-birthday/static/js/453.14b93e6f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.56a5db0a.css",
-    "static/js/main.3319dc34.js"
+    "static/css/main.7f52cbdc.css",
+    "static/js/main.e3391e65.js"
   ]
 }
