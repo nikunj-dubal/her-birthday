@@ -78,7 +78,7 @@ and babe enjoy your day.\n\n                                          ~ Your Cha
     };
 
     const heartInterval = setInterval(createHeart, 150);
-    
+
     return () => {
       clearInterval(heartInterval);
     };
@@ -152,7 +152,7 @@ and babe enjoy your day.\n\n                                          ~ Your Cha
   };
 
   const containerVariants = {
-    hidden: { 
+    hidden: {
       scale: 0,
       opacity: 0,
     },
@@ -172,7 +172,7 @@ and babe enjoy your day.\n\n                                          ~ Your Cha
   return (
     <div className="App">
       <header className="App-header">
-        <motion.div 
+        <motion.div
           className="main-container"
           initial="hidden"
           animate="visible"
@@ -194,7 +194,7 @@ and babe enjoy your day.\n\n                                          ~ Your Cha
             }}
             onClick={handleCakeClick}
           />
-          
+
           <h1 className="birthday-text">Happy 16 Mi amor!</h1>
           <h1 className="birthday-text">           </h1>
         </motion.div>
@@ -229,7 +229,7 @@ and babe enjoy your day.\n\n                                          ~ Your Cha
               <br></br>
             </p>
           </div>
-          <img 
+          <img
             src={placeholder1}
             alt="Collage item 1"
             className="collage-item"
@@ -250,7 +250,7 @@ and babe enjoy your day.\n\n                                          ~ Your Cha
           />
           <img
             src={placeholder2}
-            alt="Collage item 2" 
+            alt="Collage item 2"
             className="collage-item"
             style={{
               width: '200px',
@@ -289,7 +289,7 @@ and babe enjoy your day.\n\n                                          ~ Your Cha
             alt="Collage item 4"
             className="collage-item"
             style={{
-              width: '200px', 
+              width: '200px',
               height: '150px',
               objectFit: 'contain',
               borderRadius: '10px',
@@ -314,7 +314,7 @@ and babe enjoy your day.\n\n                                          ~ Your Cha
             ref={audioRef}
           />
           <div className="paper-container">
-            <img 
+            <img
               src={paper}
               alt="Paper"
               className="paper-image"
@@ -323,8 +323,8 @@ and babe enjoy your day.\n\n                                          ~ Your Cha
               {letter}
             </div>
           </div>
-          <button 
-            className="audio-toggle-button" 
+          <button
+            className="audio-toggle-button"
             onClick={toggleAudio}
           >
             {isPlaying ? <FaPause /> : <FaPlay />}
