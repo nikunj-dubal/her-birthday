@@ -3,14 +3,16 @@ import { motion } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import ReactPlayer from 'react-player';
 import ReactAudioPlayer from 'react-audio-player';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import cake from './assets/cake.png';
 import paper from './assets/paper.png';
 import placeholder1 from './assets/placeholder.jpg';
 import placeholder2 from './assets/placeholder 2.png';
 import placeholder3 from './assets/placeholder 3.jpeg';
 import placeholder4 from './assets/placeholder 4.jpeg';
-import video from './assets/vid.mp4';
 import backgroundMusic from './assets/Elvis Presley - Can\'t Help Falling in Love.mp3';
+import { FaPlay, FaPause } from 'react-icons/fa';
 import './css/index.css';
 import './css/second.css';
 import './css/third.css';
@@ -28,16 +30,33 @@ of our lives like this only supporting each other.\n\nI am so grateful to have y
 and babe enjoy your day.\n\n                                          ~ Your Chako❤️`);
 
   const audioRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const toggleAudio = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.audioEl.current.pause();
+        setIsPlaying(false);
+      } else {
+        audioRef.current.audioEl.current.play();
+        setIsPlaying(true);
+      }
+    }
+  };
 
   const handleVideoPlay = () => {
     if (audioRef.current) {
       audioRef.current.audioEl.current.pause();
+      setIsPlaying(false);
+      toast.info('Background music paused as YouTube video started');
     }
   };
 
   const handleVideoPause = () => {
     if (audioRef.current) {
       audioRef.current.audioEl.current.play();
+      setIsPlaying(true);
+      toast.info('Background music resumed');
     }
   };
 
@@ -148,6 +167,8 @@ and babe enjoy your day.\n\n                                          ~ Your Cha
     }
   };
 
+  const videoUrl = 'https://youtu.be/kMObS0BLpu4';
+
   return (
     <div className="App">
       <header className="App-header">
@@ -184,7 +205,7 @@ and babe enjoy your day.\n\n                                          ~ Your Cha
           <div className="main-container">
             <div className="collage-container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               <ReactPlayer
-                url={video}
+                url={videoUrl}
                 controls={true}
                 playing={false}
                 width="800px"
@@ -195,10 +216,8 @@ and babe enjoy your day.\n\n                                          ~ Your Cha
                   borderRadius: '8px'
                 }}
                 config={{
-                  file: {
-                    attributes: {
-                      controlsList: 'download'
-                    }
+                  youtube: {
+                    playerVars: { controls: 1 }
                   }
                 }}
                 onPlay={handleVideoPlay}
@@ -290,7 +309,6 @@ and babe enjoy your day.\n\n                                          ~ Your Cha
         <header className="second-header">
           <ReactAudioPlayer
             src={backgroundMusic}
-            autoPlay
             loop
             controls={false}
             ref={audioRef}
@@ -305,6 +323,13 @@ and babe enjoy your day.\n\n                                          ~ Your Cha
               {letter}
             </div>
           </div>
+          <button 
+            className="audio-toggle-button" 
+            onClick={toggleAudio}
+          >
+            {isPlaying ? <FaPause /> : <FaPlay />}
+          </button>
+          <ToastContainer position="bottom-right" autoClose={3000} />
         </header>
       </div>
     </div>
